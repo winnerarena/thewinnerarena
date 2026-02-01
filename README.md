@@ -1,2 +1,44 @@
-# thewinnerarena
-un jeu simple mais bien vous allez vous amusez
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>The Winner Arena</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="maintenance">
+  <h1>🛠️ Maintenance</h1>
+  <p>Le jeu est temporairement indisponible.<br>Reviens bientôt 💙</p>
+</div>
+
+<div id="lobby">
+  <h1>🏆 THE WINNER ARENA</h1>
+
+  <div class="colors">
+    <p>Choisis ta couleur</p>
+    <button style="background:red" onclick="setColor('red')"></button>
+    <button style="background:blue" onclick="setColor('blue')"></button>
+    <button style="background:pink" onclick="setColor('pink')"></button>
+    <button style="background:green" onclick="setColor('green')"></button>
+    <button style="background:orange" onclick="setColor('orange')"></button>
+    <button style="background:yellow" onclick="setColor('yellow')"></button>
+    <button style="background:purple" onclick="setColor('purple')"></button>
+  </div>
+
+  <button onclick="startGame('classic')">Mode Classique</button>
+  <button onclick="startGame('chaos')">🔥 Chaos Arena</button>
+</div>
+
+<canvas id="game"></canvas>
+
+<button id="commentBtn">💬</button>
+
+<div id="comments">
+  <textarea id="commentText" placeholder="Laisse un commentaire ou dis-moi s'il y a un bug"></textarea>
+  <button onclick="saveComment()">Envoyer</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
